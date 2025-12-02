@@ -320,40 +320,80 @@ def train_adaptive(model, inputs_bc, targets_bc, inputs_pde, epochs=3000):
     return history
 ```
 ---
-transition: Fade in
+transition: fade in
+---
+# Resultados
+
+<div class="flex justify-center gap-6 mt-8">
+  <img src="/images/exact_solution.png" alt="Imagem 10" class="shadow-md w-1/3">
+  <img src="/images/standard_pinn_prediction.png" alt="Imagem 20" class="shadow-md w-1/3">
+  <img src="/images/adaptive_pinn_prediction.png" alt="Imagem 30" class="shadow-md w-1/3">
+</div>
+
+---
+transition: fade in
 ---
 
-<div class="grid grid-cols-3 gap-4 mt-4">
-  <div class="flex flex-col items-center justify-center">
-    <h3 class="text-center font-bold mb-2">Solução</h3>
-    <figure class="text-center">
-      <img src="/images/exact_solution.png" class="h-60 object-contain mx-auto" />
-      <figcaption class="text-sm mt-1">1. Solução Exata</figcaption>
-    </figure>
-    <div class="h-60"></div>
-  </div>
+# Diminuição do erro
 
-  <div class="flex flex-col items-center">
-    <h3 class="text-center font-bold mb-2 text-red-600">PINN Padrão</h3>
-    <figure class="text-center mb-4">
-      <img src="/images/standard_pinn_prediction.png" class="h-60 object-contain mx-auto" />
-      <figcaption class="text-sm mt-1">2. Predição</figcaption>
-    </figure>
-    <figure class="text-center">
-      <img src="/images/absolute_error_standard_pinn.png" class="h-60 object-contain mx-auto" />
-       <figcaption class="text-sm mt-1 font-bold text-red-500">4. Erro Absoluto (Max: 1.63e+00)</figcaption>
-    </figure>
-  </div>
+<div class="flex justify-center gap-6 mt-8">
+  <img src="/images/absolute_error_standard_pinn.png" alt="Imagem 1" class="shadow-md w-1/2">
+  <img src="/images/absolute_error_adaptive_pinn.png" alt="Imagem 2" class="shadow-md w-1/2">
+</div>
 
-  <div class="flex flex-col items-center">
-    <h3 class="text-center font-bold mb-2 text-green-600">PINN Adaptativa</h3>
-    <figure class="text-center mb-4">
-      <img src="/images/adaptive_pinn_prediction.png" class="h-60 object-contain mx-auto" />
-      <figcaption class="text-sm mt-1">3. Predição</figcaption>
-    </figure>
-    <figure class="text-center">
-      <img src="/images/absolute_error_adaptive_pinn.png" class="h-60 object-contain mx-auto" />
-      <figcaption class="text-sm mt-1 font-bold text-green-500">5. Erro Absoluto (Max: 3.90e-01)</figcaption>
-    </figure>
-  </div>
+---
+transition: fade
+---
+
+# Treinamento relativamente estável
+
+<!-- Linha de cima (2 imagens) -->
+<div class="flex justify-center gap-6 mt-8">
+  <img src="/images/training_history_standard_pinn.png" alt="Imagem 1" class="shadow-md w-1/2">
+  <img src="/images/training_history_adaptive_pinn.png" alt="Imagem 2" class="shadow-md w-1/2">
+</div>
+
+<!-- Linha de baixo (1 imagem centralizada) -->
+<div class="flex justify-center mt-6">
+  <img src="/images/adaptive_weights_history.png" alt="Imagem 3" class="shadow-md w-0.9/2">
+</div>
+
+---
+transition: fade in
+---
+# Infelizmente nunca é fácil
+
+<div class="flex justify-center gap-6 mt-8">
+  <img src="/images/exact_solution_2.png" alt="Imagem 10" class="shadow-md w-1/3">
+  <img src="/images/standard_pinn_prediction_2.png" alt="Imagem 20" class="shadow-md w-1/3">
+  <img src="/images/adaptive_pinn_prediction_2.png" alt="Imagem 30" class="shadow-md w-1/3">
+</div>
+
+---
+transition: fade in
+---
+
+# Erro maior que da PINN tradicional, sensibilidade ao chute inicial
+
+
+<div class="flex justify-center gap-6 mt-8">
+  <img src="/images/absolute_error_standard_pinn_2.png" alt="Imagem 1" class="shadow-md w-1/2">
+  <img src="/images/absolute_error_adaptive_pinn_2.png" alt="Imagem 2" class="shadow-md w-1/2">
+</div>
+
+---
+transition: fade
+---
+
+# F.I.M
+
+<!-- Linha de cima (2 imagens) -->
+<div class="flex justify-center gap-6 mt-8">
+  <img src="/images/training_history_standard_pinn_2.png" alt="Imagem 1" class="shadow-md w-1/2">
+  <img src="/images/training_history_adaptive_pinn_2.png" alt="Imagem 2" class="shadow-md w-1/2">
+</div>
+
+<!-- Linha de baixo (1 imagem centralizada) -->
+<div class="flex justify-center mt-6">
+  <img src="/images/adaptive_weights_history_2.png" alt="Imagem 3" class="shadow-md w-0.9/2">
 </div>
