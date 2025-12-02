@@ -1,0 +1,6 @@
+s_bc = torch.tensor(0.2, requires_grad=True, device=device)
+s_pde = torch.tensor(0.04, requires_grad=True, device=device)
+
+Final MSE Standard: 0.022694
+Final MSE Adaptive: 0.000238
+
